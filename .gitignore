@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+.venv/
+venv/
+
+# Model checkpoints
+*.pth
+
+# Large datasets
+train/
+test/
+validation/
+
+# Gemini API keys
+.env
+
+# Jupyter and logs
+*.ipynb
+*.log
+
+# macOS
+.DS_Store

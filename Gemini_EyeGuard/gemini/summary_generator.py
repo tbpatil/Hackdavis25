@@ -1,5 +1,5 @@
 import google.generativeai as genai
-from knowledge.dr_stage_info import stage_info
+from app.gemini_principal.knowledge.dr_stage_info import stage_info
 
 # Configura la API key (puedes mejorar esto con un .env)
 # genai.configure(api_key="AIzaSyB2PBS31t2Hc7n4ppVkzmC_KvX9G5kTbjE")
