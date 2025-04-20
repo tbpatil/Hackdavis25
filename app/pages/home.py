@@ -3,6 +3,11 @@ import base64
 import os
 from PIL import Image
 import io
+# In home.py
+if st.button("Continue"):
+    st.session_state.page = "profile"
+    st.rerun()
+
 
 # Helper to convert and rotate image to base64
 def get_base64_image(image_path, rotate_angle=-90):

@@ -1,25 +1,39 @@
 import streamlit as st
-import sys
-import os
-
-# Add the parent 'app' directory to the system path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..','gemini_principal')))
-from model.predict import predict_image
 
 def render():
-    st.title("🔍 Prediction Result")
+    st.title(f"Stage: {st.session_state.predicted_stage}")
 
-    if "image_path" not in st.session_state:
-        st.warning("No image uploaded. Please go back.")
-        return
+    if "show_details" not in st.session_state:
+        st.session_state.show_details = False
 
-    # Predict DR stage and get confidence scores
-    predicted_stage, probs = predict_image(st.session_state.image_path)
-    confidence = max(probs)
+    st.markdown(
+        """
+        <div style="background-color:#1c1c1c; padding: 20px; border-radius: 10px; color:white;">
+            <h3 style="color:#FFD700;">Summary</h3>
+            <p>{}</p>
+        </div>
+        """.format(st.session_state.short_summary),
+        unsafe_allow_html=True
+    )
 
-    st.success(f"✅ Predicted DR Level: {predicted_stage}")
-    st.write(f"🧠 Model Confidence: {confidence * 100:.2f}%")
+    col1, col2 = st.columns(2)
 
-    # Option to go back to home
-    st.markdown("---")
-    st.button("🔄 Start Over", on_click=lambda: st.session_state.update({"page": "home"}))
+    with col1:
+        if st.button("🔍 Learn More"):
+            st.session_state.show_details = True
+
+    with col2:
+        if st.button("🔙 Back to Dashboard"):
+            st.session_state.page = "dashboard"
+            st.rerun()
+
+    if st.session_state.show_details:
+        st.markdown(
+            """
+            <div style="background-color:#1c1c1c; padding: 20px; border-radius: 10px; color:white; margin-top: 20px;">
+                <h3 style="color:#FFD700;">Details</h3>
+                <p>{}</p>
+            </div>
+            """.format(st.session_state.detailed_summary),
+            unsafe_allow_html=True
+        )
