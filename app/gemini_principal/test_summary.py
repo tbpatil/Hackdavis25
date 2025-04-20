@@ -3,7 +3,6 @@ import os
 
 # Add the grandparent directory to the Python path (so "knowledge" becomes importable)
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from gemini.summary_generator import generate_short_summary, generate_detailed_summary
 
 def test_summaries(stage, confidence):
