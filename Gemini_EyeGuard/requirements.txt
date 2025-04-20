@@ -1,0 +1,5 @@
+google-generativeai>=0.3.1
+pdfplumber>=0.10.2
+ #openai   (opcional, por si usas GPT también)
+ #flask    (opcional, para una API simple en caso de quererlo)
+ #python-dotenv>=1.0.1  # (si guardas tu API key en .env)
