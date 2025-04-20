@@ -1,4 +1,3 @@
-# app/pages/landing.py
 import streamlit as st
 from PIL import Image
 
@@ -8,9 +7,9 @@ def render():
     rotated_image = image.rotate(-90, expand=True)
 
     # Show retina image rotated
-    st.image(rotated_image, use_column_width=True)
+    st.image(rotated_image, use_container_width=True)
 
-    # Styled content block
+    # Styled text block
     st.markdown("""
         <div style="padding: 30px 20px;">
             <h1 style="font-size: 2.8em; font-weight: 900;">
@@ -24,7 +23,30 @@ def render():
         </div>
     """, unsafe_allow_html=True)
 
-    # Streamlit-native button (handled by st.button)
-    if st.button("Get Started", key="start_button"):
-        st.session_state.page = "profile"
-        st.rerun()
+       # Inject style for button
+    st.markdown("""
+        <style>
+        .center-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .stButton>button {
+            background-color: #FFD700 !important;
+            color: black !important;
+            font-weight: 700 !important;
+            font-size: 1.1em !important;
+            padding: 0.75em 2em !important;
+            border-radius: 12px !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    # Button inside centered div
+    col1, col2, col3 = st.columns([2, 2, 1])
+    with col2:
+        if st.button("Get Started", key="start_button"):
+            st.session_state.page = "profile"
+            st.rerun()

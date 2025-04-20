@@ -21,17 +21,13 @@ else:
 inject_custom_css()
 
 # ✅ Initialize session state
-if st.session_state.page == "main":
-    landing.render()
+if "page" not in st.session_state:
+    st.session_state.page = "main"  # default to landing
 
 # ✅ Navigation logic
 def render_page(page):
     if page == "main":
-        st.title("👁️ VISNIEX")
-        st.markdown("Welcome to AI-powered Retina Diagnostics!")
-        if st.button("Get Started"):
-            st.session_state.page = "profile"
-            st.rerun()
+        landing.render()
 
     elif page == "profile":
         profile.render()
