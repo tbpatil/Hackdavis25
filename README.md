@@ -39,12 +39,12 @@ We divided our project into three key components:
 ### Hardware Protopye
 We desiged a custom-built smartphone fundus camera attachment for smartphones used for retinal imaging:
 
-![Fundus Camera](https://raw.githubusercontent.com/tbpatil/Hackdavis25/main/assets/fundus_camera.jpg)
+![Fundus Camera](https://raw.githubusercontent.com/tbpatil/Hackdavis25/main/rdassets/fundus_camera.jpg)
 <p align="center">
   <img src="assets/fundus_camera.jpg" width="400" alt="Fundus Camera Prototype">
 </p>
 
-![Fundus Camera Prototype (Internal)](assets/fundus_camerav2.jpg)
+![Fundus Camera Prototype (Internal)](rdassets/fundus_camerav2.jpg)
 <p align="center">
   <img src="assets/fundus_camerav2.jpg" width="400" alt="Fundus Camera Prototype">
 </p>
