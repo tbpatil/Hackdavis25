@@ -36,17 +36,17 @@ We divided our project into three key components:
 2. **Gemini API**: Generates simple explanations and condition management advice
 3. **Streamlit App**: Provides an easy-to-use interface for users
 
-### Hardware Protopye
-We desiged a custom-built smartphone fundus camera attachment for smartphones used for retinal imaging:
+### Hardware Prototype
+We designed a custom-built smartphone fundus camera attachment for smartphones used for retinal imaging:
 
 ![Fundus Camera](https://raw.githubusercontent.com/tbpatil/Hackdavis25/main/rdassets/fundus_camera.jpg)
-<p align="center">
-  <img src="assets/fundus_camera.jpg" width="400" alt="Fundus Camera Prototype">
+<p align="left">
+  <img src="assets/fundus_camera.jpg" width="400">
 </p>
 
 ![Fundus Camera Prototype (Internal)](rdassets/fundus_camerav2.jpg)
-<p align="center">
-  <img src="assets/fundus_camerav2.jpg" width="400" alt="Fundus Camera Prototype">
+<p align="right">
+  <img src="assets/fundus_camerav2.jpg" width="400">
 </p>
 
 
